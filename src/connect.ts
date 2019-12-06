@@ -1,24 +1,23 @@
-import Config from 'config'
 import { SubmissionStream } from 'snoostorm'
 import Snoowrap from 'snoowrap'
-import ArchiveGenerator from './archive'
-import { IRedditLinkArchiverSettings } from './types'
+import ActionGenerator from './action'
+import { IRedditActionSettings } from './types'
 
-const {
+const connect = ({
   credentials,
   settings,
   subreddits,
-  posts,
-}: IRedditLinkArchiverSettings = Config.get('config')
-const client = new Snoowrap(credentials)
-
-const connect = () => {
-  const archiveFunc = ArchiveGenerator(posts)
+  urls,
+  titles,
+  users,
+}: IRedditActionSettings) => {
+  const client = new Snoowrap(credentials)
+  const action = ActionGenerator({ urls, titles, users })
   return subreddits.map(subreddit =>
     new SubmissionStream(client, {
       subreddit,
       ...settings,
-    }).on('item', archiveFunc),
+    }).on('item', action),
   )
 }
 
