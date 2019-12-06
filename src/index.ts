@@ -1,3 +1,3 @@
-import config from 'config';
+import connect from './connect';
 
-
+connect();
