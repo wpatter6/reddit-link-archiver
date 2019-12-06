@@ -1,0 +1,25 @@
+{
+  "name": "reddit-link-archiver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "start:dev": "nodemon",
+    "start": "npm run build && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "nodemon": "^2.0.1",
+    "rimraf": "^3.0.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "snoostorm": "^1.2.2",
+    "snoowrap": "^1.20.1"
+  }
+}
