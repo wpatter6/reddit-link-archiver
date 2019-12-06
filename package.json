@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/config": "^0.0.36",
     "@types/node": "^12.12.14",
     "nodemon": "^2.0.1",
     "rimraf": "^3.0.0",
@@ -19,6 +20,7 @@
     "typescript": "^3.7.3"
   },
   "dependencies": {
+    "config": "^3.2.4",
     "snoostorm": "^1.2.2",
     "snoowrap": "^1.20.1"
   }
