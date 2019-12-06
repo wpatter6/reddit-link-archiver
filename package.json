@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rimraf ./dist && tsc",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "lint:fix": "npm run lint -- --fix",
     "start:dev": "nodemon",
     "start": "npm run build && node dist/index.js"
   },
