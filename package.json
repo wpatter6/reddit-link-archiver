@@ -27,7 +27,6 @@
   },
   "dependencies": {
     "config": "^3.2.4",
-    "snoostorm": "^1.2.2",
-    "snoowrap": "^1.20.1"
+    "reddit-actions": "*"
   }
 }

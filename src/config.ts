@@ -1,8 +1,17 @@
 import Config from 'config'
-import { IRedditActionSettings } from './types'
+import { RedditActionSettings } from 'reddit-actions'
+
+interface ArchiverConfig extends RedditActionSettings {
+  credentials: {
+    userAgent: string
+    clientId: string
+    clientSecret: string
+    refreshToken: string
+  }
+}
 
 const getConfig = () => {
-  return Config.get('config') as IRedditActionSettings
+  return Config.get('config') as ArchiverConfig
 }
 
 export default getConfig

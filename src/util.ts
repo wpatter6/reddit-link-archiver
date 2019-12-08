@@ -1,6 +1,6 @@
-const logPrefix = '[reddit-action]: '
+const logPrefix = '[reddit-archiver] '
 
-export const log = (message?: any, ...optionalParams: any[]) => {
+export const log = (message?: string, ...optionalParams: any[]) => {
   if (process.env.NODE_ENV !== 'production') {
     // tslint:disable-next-line
     console.log(
